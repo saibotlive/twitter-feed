@@ -28,8 +28,8 @@ process.on('SIGINT', () => {
 const app = express();
 const port = process.env.DEBUG_PORT || 30000;
 
-app.get('/handle/:id', (req, res) => {
-  const id = req.params.id;
+app.get('/user/:id', (req, res) => {
+  const id = req.params.id || 'cnnbrk';
   client.get('statuses/user_timeline', { screen_name: id, count: 10 }, function(
     error,
     tweets,

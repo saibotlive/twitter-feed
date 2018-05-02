@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Tweet from '../Tweet';
 import { Container, ErrorMessage, Wrapper } from './Styles';
 
 class Main extends Component {
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.object.isRequired
+    })
+  };
+
   state = {
     response: []
   };
 
   componentDidMount() {
-    this.callApi();
-  }
-
-  callApi = async () => {
     const {
       match: { params }
     } = this.props;
     const id = params.id || 'cnnbrk';
-    const response = await fetch(`/handle/${id}`);
+    this.callApi(`/user/${id}`);
+  }
+
+  callApi = async url => {
+    const response = await fetch(url);
     const body = await response.json();
     this.setState({ response: body });
   };

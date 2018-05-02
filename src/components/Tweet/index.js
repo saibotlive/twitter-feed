@@ -4,20 +4,23 @@ import { Container, Header, Link } from './Styles';
 
 const Tweet = ({ tweet }) => {
   const { entities, text, user } = tweet;
-  const headerTxt = text.indexOf('http') !== -1 ? text.slice(0, text.indexOf('http')) : text;
+  const withLink = text.indexOf('http') !== -1;
+  const links = text.slice(text.indexOf('http')).split(' ');
+
+  const headerTxt = withLink ? text.slice(0, text.indexOf('http')) : text;
 
   return (
     <Container>
       <Header>{headerTxt}</Header>
-      {entities &&
+      {withLink &&
         entities.urls.map((link, i) => (
           <Link
             color={user.profile_link_color}
-            href={link.expanded_url}
+            href={link.url}
             key={`link-${i}`}
             target="_blank"
           >
-            {link.display_url}
+            {links[i]}
           </Link>
         ))}
     </Container>

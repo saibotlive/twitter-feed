@@ -21,5 +21,5 @@ export const Link = styled.a`
   font-size: 1.5rem;
   text-decoration: none;
   color: ${props => `#${props.color}`};
+  word-break: break-word;
 `;
-

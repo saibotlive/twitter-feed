@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Tweet component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Tweet
+    tweet={
+        Object {
+            "entities": Object {
+              "urls": Array [
+                Object {
+                  "display_url": "display",
+                  "expanded_url": "expanded",
+                },
+              ],
+            },
+            "text": "This is a tweet http://twitter.com",
+            "user": Object {
+              "profile_background_image_url": "url",
+              "profile_link_color": "000000",
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <styled.div>
+          This is a tweet 
+</styled.div>,
+        Array [
+          <styled.a
+            color="000000"
+            href={undefined}
+            target="_blank"
+>
+            http://twitter.com
+</styled.a>,
+        ],
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "This is a tweet ",
+        },
+        "ref": null,
+        "rendered": "This is a tweet ",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "link-0",
+        "nodeType": "class",
+        "props": Object {
+          "children": "http://twitter.com",
+          "color": "000000",
+          "href": undefined,
+          "target": "_blank",
+        },
+        "ref": null,
+        "rendered": "http://twitter.com",
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <styled.div>
+            This is a tweet 
+</styled.div>,
+          Array [
+            <styled.a
+              color="000000"
+              href={undefined}
+              target="_blank"
+>
+              http://twitter.com
+</styled.a>,
+          ],
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "This is a tweet ",
+          },
+          "ref": null,
+          "rendered": "This is a tweet ",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "link-0",
+          "nodeType": "class",
+          "props": Object {
+            "children": "http://twitter.com",
+            "color": "000000",
+            "href": undefined,
+            "target": "_blank",
+          },
+          "ref": null,
+          "rendered": "http://twitter.com",
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
