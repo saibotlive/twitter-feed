@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Header, Link } from './Styles';
+import { Container, Header, Link, Img } from './Styles';
 
 const Tweet = ({ tweet }) => {
   const { entities, text, user } = tweet;
@@ -14,15 +14,11 @@ const Tweet = ({ tweet }) => {
       <Header>{headerTxt}</Header>
       {withLink &&
         entities.urls.map((link, i) => (
-          <Link
-            color={user.profile_link_color}
-            href={link.url}
-            key={`link-${i}`}
-            target="_blank"
-          >
+          <Link color={user.profile_link_color} href={link.url} key={`link-${i}`} target="_blank">
             {links[i]}
           </Link>
         ))}
+      {entities.media && entities.media.map(obj => <Img key={obj.id_str} src={obj.media_url} />)}
     </Container>
   );
 };

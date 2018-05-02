@@ -22,4 +22,12 @@ export const Link = styled.a`
   text-decoration: none;
   color: ${props => `#${props.color}`};
   word-break: break-word;
+  display: inline-block;
+  margin: 0 0 20px 0;
+`;
+
+export const Img = styled.img`
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
 `;

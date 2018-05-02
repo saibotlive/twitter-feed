@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import { shallow } from 'enzyme';
-import { Header, Link } from './Styles';
+import { Header, Link, Img } from './Styles';
 import Tweet from './';
 
 const props = {
@@ -30,8 +30,20 @@ it('renders Tweet text', () => {
 it('renders Tweet without Link', () => {
   const newProps = { ...props, tweet: { ...props.tweet, text: 'No link' } };
   const comp = shallow(<Tweet {...newProps} />);
-  console.log('xtest', comp.html());
   expect(comp.find(Link).exists()).toBe(false);
+});
+
+it('renders Tweet with Img', () => {
+  const newProps = {
+    ...props,
+    tweet: {
+      ...props.tweet,
+      entities: { ...props.tweet.entities, media: [{ media_url: 'img-url', id_str: 'str' }] }
+    }
+  };
+  const comp = shallow(<Tweet {...newProps} />);
+  console.log('xtest', comp.html());
+  expect(comp.find(Img).exists()).toBe(true);
 });
 
 it('renders Tweet Link with hex color black', () => {
