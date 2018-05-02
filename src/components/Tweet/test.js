@@ -42,7 +42,6 @@ it('renders Tweet with Img', () => {
     }
   };
   const comp = shallow(<Tweet {...newProps} />);
-  console.log('xtest', comp.html());
   expect(comp.find(Img).exists()).toBe(true);
 });
 
