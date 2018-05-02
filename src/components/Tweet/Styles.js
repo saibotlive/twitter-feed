@@ -15,6 +15,7 @@ export const Container = styled.div`
 
 export const Header = styled.div`
   font-size: 1.5rem;
+  margin: 0 0 20px 0;
 `;
 
 export const Link = styled.a`
