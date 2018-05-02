@@ -31,4 +31,5 @@ export const Img = styled.img`
   display: block;
   max-width: 100%;
   border-radius: 5px;
+  margin: 0 auto;
 `;
