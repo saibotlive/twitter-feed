@@ -11,7 +11,7 @@ e.g(`git clone https://github.com/saibotlive/twitter-feed.git`)
 
 run `yarn`
 
-create .env file in root directory
+create .env file in root directory for twitter keys
 
 run `yarn start` to run the express server and client server comcurrently
 
